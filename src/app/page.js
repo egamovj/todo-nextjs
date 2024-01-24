@@ -14,16 +14,23 @@ const Todo = () => {
     console.log(mainTask);
   };
 
+  const deleteHandler = (index) => {
+    let copytask = [...mainTask]
+    copytask.splice(index, 1);
+    setMainTask(copytask);
+  }
+
   let renderTask = <h2>No Tasks Available</h2>;
 
   if (mainTask.length > 0) {
     renderTask = mainTask.map((item,index) => {
       return ( 
-        <li key={index}>
-          <div className='flex justify-between mb-5' >
-            <h5 className='text-xl font-semibold'>{item.title}</h5>
-            <h6 className='text-xl font-semibold'> {item.description} </h6>
+        <li key={index} className='flex items-center justify-between mb-8'>
+          <div className='flex items-center justify-between w-2/3' >
+            <h5 className='text-2xl font-semibold'>{item.title}</h5>
+            <h6 className='text-lg font-semibold'> {item.description} </h6>
           </div>
+          <button onClick={() => {deleteHandler(index)}} className='bg-red-500 text-white px-4 py-2 rounded font-bold'>Delete</button>
         </li> 
       );
     });
