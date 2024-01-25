@@ -1,3 +1,5 @@
+![todo](https://github.com/egamovj/todo-nextjs/assets/134671078/a871fa76-ecb6-4b17-84e6-d156a90690af)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
