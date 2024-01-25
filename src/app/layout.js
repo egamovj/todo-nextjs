@@ -12,10 +12,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <>
-      <Head>
-        <link rel="icon" href="https://play-lh.googleusercontent.com/-HVJ0Nk8pks9-172JJSBsORCJpKd9b2A6E6EcQfVsgQzBQgI5uqsFiy8bGSwscyD_w" />
-      </Head>
       <html lang="en">
+        <Head>
+          <link rel="icon" href="../public/favicon.ico" />
+        </Head>
         <body className={inter.className}>{children}</body>
       </html>
     </>
