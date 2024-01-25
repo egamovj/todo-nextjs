@@ -19,13 +19,11 @@ const Todo = () => {
     e.preventDefault();
 
     if (editIndex !== null) {
-      // Edit existing task
       const updatedTasks = [...mainTask];
       updatedTasks[editIndex].title = title;
       setMainTask(updatedTasks);
       setEditIndex(null);
     } else {
-      // Add new task
       setMainTask([...mainTask, { title, done: false }]);
     }
 
@@ -42,7 +40,7 @@ const Todo = () => {
     let copytask = [...mainTask];
     copytask.splice(index, 1);
     setMainTask(copytask);
-    setEditIndex(null); // Clear editIndex when deleting a task
+    setEditIndex(null); 
   };
 
   const toggleDoneHandler = (index) => {
